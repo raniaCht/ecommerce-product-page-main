@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="col">
+        <span class="navbar-logo">
+          <img src="images/logo.svg" alt="logo" />
+        </span>
+        <ul class="navbar-menu">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <a class="navbar-cart">
+          <img src="images/icon-cart.svg" />
+        </a>
+        <a class="navbar-profile">
+          <img src="images/image-avatar.png" />
+        </a>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col product-display">
+        <div class="img-main">
+          <img src="images/image-product-1.jpg" />
+        </div>
+        <div class="list-products">
+          <img src="images/image-product-1-thumbnail.jpg" />
+          <img src="images/image-product-2-thumbnail.jpg" />
+          <img src="images/image-product-3-thumbnail.jpg" />
+          <img src="images/image-product-4-thumbnail.jpg" />
+        </div>
+      </div>
+      <div class="col product-descrp">
+        <h4>Sneaker Company</h4>
+        <h3>Fall Limited Edition Sneakers</h3>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="price">
+          <div class="price-new">
+            <span class="price-new-value">$125.00</span>
+            <span class="price-percent">50%</span>
+          </div>
+          <span class="price-old">$250.00</span>
+        </div>
+        <div class="count-buy">
+          <div class="counter">
+            <button><img src="images/icon-minus.svg"></button>
+            <span>0</span>
+            <button><img src="images/icon-plus.svg"></button>
+          </div>
+          <button class="buy">
+            <svg class="icon">
+              <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg> Add to cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Rania Chettab</a>.
+    </div>
+  </div>
+</body>
+
+</html>
