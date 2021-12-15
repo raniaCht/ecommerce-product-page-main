@@ -40,24 +40,42 @@
         </ul>
       </div>
       <div class="col">
-        <a class="navbar-cart">
+        <a href="#" class="navbar-cart">
           <img src="images/icon-cart.svg" />
         </a>
-        <a class="navbar-profile">
-          <img src="images/image-avatar.png" />
-        </a>
+        <div class="navbar-profile">
+          <a href="#">
+            <img src="images/image-avatar.png" />
+          </a>
+          <div class="cart-product">
+            <div class="cart-header">
+              Cart
+            </div>
+            <div class="cart-body">
+              Your cart is empty.
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
     <div class="row">
       <div class="col product-display">
         <div class="img-main">
-          <img src="images/image-product-1.jpg" />
+          <img src="images/image-product-1.jpg" id="image_main" />
         </div>
         <div class="list-products">
-          <img src="images/image-product-1-thumbnail.jpg" />
-          <img src="images/image-product-2-thumbnail.jpg" />
-          <img src="images/image-product-3-thumbnail.jpg" />
-          <img src="images/image-product-4-thumbnail.jpg" />
+          <div class="active">
+            <img src="images/image-product-1-thumbnail.jpg" />
+          </div>
+          <div>
+            <img src="images/image-product-2-thumbnail.jpg" />
+          </div>
+          <div>
+            <img src="images/image-product-3-thumbnail.jpg" />
+          </div>
+          <div>
+            <img src="images/image-product-4-thumbnail.jpg" />
+          </div>
         </div>
       </div>
       <div class="col product-descrp">
@@ -81,9 +99,8 @@
             <button><img src="images/icon-plus.svg"></button>
           </div>
           <button class="buy">
-            <svg class="icon">
-              <use xlink:href="images/sprite.svg#icon-cart"></use>
-            </svg> Add to cart
+            <img src="images/icon-cart-white.svg" />
+            Add to cart
           </button>
         </div>
 
@@ -94,6 +111,8 @@
       Coded by <a href="#">Rania Chettab</a>.
     </div>
   </div>
+  <div id="modal_image"></div>
+  <script src="app.js"></script>
 </body>
 
 </html>

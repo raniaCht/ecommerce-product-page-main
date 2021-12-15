@@ -11,6 +11,7 @@
     --Light-grayish-blue: hsl(223, 64%, 98%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 0%);
+    --lightbox-background: #000000c0;
 }
 
 *, *::after, *::before{
@@ -38,7 +39,6 @@ body{
 .navbar{
     display: flex;
     height: 5rem;
-    overflow-y: hidden;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--Grayish-blue);
@@ -82,25 +82,60 @@ body{
     color: var(--Very-vark-blue);
 }
 
-.navbar-profile {
+.navbar-profile{
+    position: relative;
+    margin-left: 2rem;
+}
+
+.navbar-profile a{
     width: 2.5rem;
+    height: 2.5rem;
     overflow: hidden;
     cursor: pointer;
-    margin-left: 2rem;
     border-radius: 50%;
     border: 2px solid transparent;
-    height: 2.5rem;
+    display: block;
     transition: all .3s ease;
 }
 
-.navbar-profile:hover{
+.navbar-profile a:hover{
     border-color: var(--Orange);
+}
+
+.navbar-profile:hover .cart-product{
+    display: block;
+}
+
+.navbar-profile .cart-product{
+    width: 20rem;
+    height: 13rem;
+    display: none;
+    background-color: var(--White);
+    position: absolute;
+    top: 2.7rem;
+    right: -3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .navbar-cart{
     width: 1rem;
     cursor: pointer;
     transition: all .3s ease;
+}
+
+.cart-header{
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.cart-body{
+    height: calc(100% - 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-cart:hover{
@@ -131,13 +166,17 @@ img {
 .img-main{
     padding: .8rem;
 }
-
+.img-main img{
+    cursor: pointer;
+}
 .list-products{
     display: flex;
 }
 
-.list-products img{
-    padding: .8rem;
+.list-products div{
+    margin: .8rem;
+    padding: 0;
+    border-radius: 1rem;
 }
 
 .product-descrp{
@@ -209,6 +248,20 @@ img {
     padding: .7rem;
     cursor: pointer;
 }
+.list-products div img{
+    display: block;
+}
+
+.list-products div.active img{
+    filter: grayscale(30%);
+}
+.list-products div.active{
+    border: 2px solid var(--Orange);
+}
+
+.counter button:hover {
+    opacity: .5;
+}
 
 .counter span{
     padding: 1.5rem;
@@ -237,7 +290,7 @@ img {
     opacity: .7;
 }
 
-.list-products img:hover{
+.list-products div:hover img{
     opacity: .5;
 }
 
@@ -245,4 +298,25 @@ img {
     width: 50px; 
     height: 50px;
     margin: .5em;
+}
+.modal-showed {
+    position: relative;
+    overflow: hidden;
+}
+.show{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: var(--lightbox-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show .img-main img{
+    width: 20rem;
+}
+
+.show .product-display{
+    margin: 0 5rem;
 }
